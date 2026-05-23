@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Token Calculator UI</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="calculator">
+      <h1>Token Calculator</h1>
+
+      <p>
+        Estimate token usage and pricing for AI prompts, completions, and API
+        requests.
+      </p>
+
+      <div class="input-box">
+        <label>Enter Prompt</label>
+        <input type="text" id="promptInput" placeholder="Type your prompt here..." required />
+        <div class="error" id="promptError"></div>
+      </div>
+
+     
+
+      <div class="input-box">
+        <label>Estimated Characters</label>
+        <input type="number" id="CharactersInput" value="" placeholder="Type number of characters..." readonly />
+      </div>
+      <div class="input-box">
+      <label>Select AI Model</label>
+      <select>
+        <option>GPT-4</option>
+        <option>GPT-4 Turbo</option>
+        <option>Claude</option>
+        <option>Gemini</option>
+      </select>
+    </div>
+      <div class="input-box">
+        <label>Estimated Words</label>
+        <input type="number" id="WordsInput" value="" placeholder="Type number of words..." readonly />
+      </div>
+
+      <button class="btn">Calculate Tokens</button>
+
+      <div class="result-box">
+        <h2>Estimated Tokens</h2>
+        <div class="token-result"></div>
+        <div class="price"></div>
+      </div>
+
+      
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
